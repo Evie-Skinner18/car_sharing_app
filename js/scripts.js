@@ -2,4 +2,4 @@
 // an envirinement var
 require('dotenv').config();
 
-console.log(process.env);
+const apiKey = process.env.API_KEY;
