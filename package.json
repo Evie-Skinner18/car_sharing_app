@@ -8,9 +8,11 @@
   },
   "dependencies": {
     "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
     "jest": "^24.9.0",
-    "npm": "^6.11.3"
+    "npm": "^6.12.1",
+    "request": "^2.88.0"
   },
   "devDependencies": {},
   "scripts": {
