@@ -1,6 +1,7 @@
 // require express
 const express = require('express');
 const request = require('request');
+// const leaflet = require('leaflet');
 require('dotenv').config();
 
 const app = express();
@@ -13,17 +14,6 @@ app.set('view engine', 'ejs');
 app.get('/', (req, res)=> {
   res.render('map');
 })
-
-
-var myMap = L.map('map');
-    myMap.setView([48.7965913, 2.3210938], 3);
-    L.tileLayer(`https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}.png?access-token=${apiKey}`, {
-        attribution: '<a href="https://www.jawg.io" target="_blank">&copy; Jawg</a> | <a href="https://www.openstreetmap.org" target="_blank">&copy; OpenStreetMap</a>&nbsp;contributors',
-        maxZoom: 22
-    }).addTo(myMap);
-    // add blobs on the map
-    L.marker([48.7965913, 2.3210938]).addTo(myMap);
-    L.marker([51.5, -0.09]).addTo(myMap);
 
 
 
