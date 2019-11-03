@@ -15,7 +15,7 @@ app.get('/', (req, res)=> {
   res.render('landing');
 })
 
-// map route
+// map route, feeding in apiKey because we want to access the Jawg API
 app.get('/map', (req, res)=> {
   res.render('map', {apiKey: apiKey});
 })

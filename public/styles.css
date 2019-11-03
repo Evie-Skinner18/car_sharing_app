@@ -5,6 +5,12 @@
 }
 
 #app-body {
-    margin-top: 5%;;
+    color: #042E60;
+    margin-top: 5%;
     background: aquamarine;
+    font-family: 'Concert One', cursive;
+}
+
+.extra-padding {
+    padding: 10%;
 }
