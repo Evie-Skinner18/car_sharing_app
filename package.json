@@ -1,0 +1,32 @@
+{
+  "name": "car_sharing_app",
+  "version": "1.0.0",
+  "description": "An app to faciliate car sharing amongst friends",
+  "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "leaflet": "^1.5.1",
+    "npm": "^6.12.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evie-Skinner18/car_sharing_app.git"
+  },
+  "author": "Evie-Skinner18",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evie-Skinner18/car_sharing_app/issues"
+  },
+  "homepage": "https://github.com/Evie-Skinner18/car_sharing_app#readme"
+}
