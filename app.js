@@ -12,7 +12,12 @@ app.set('view engine', 'ejs');
 
 // root route
 app.get('/', (req, res)=> {
-  res.render('map');
+  res.render('landing');
+})
+
+// map route
+app.get('/map', (req, res)=> {
+  res.render('map', {apiKey: apiKey});
 })
 
 
