@@ -4,15 +4,32 @@
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
     integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
     crossorigin=""></script>
-    <script>
+    <script>         
         const myMap = L.map('map');
-            myMap.setView([48.7965913, 2.3210938], 3);
-            L.tileLayer(`https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}.png?access-token=<%= apiKey %>`, {
-                attribution: '<a href="https://www.jawg.io" target="_blank">&copy; Jawg</a> | <a href="https://www.openstreetmap.org" target="_blank">&copy; OpenStreetMap</a>&nbsp;contributors',
-                maxZoom: 22
-            }).addTo(myMap);
-            // add blobs on the map
-            L.marker([48.7965913, 2.3210938]).addTo(myMap);
-            L.marker([51.5, -0.09]).addTo(myMap);    
+        const paris = [48.7965913, 2.3210938];
+        
+        // first of all set the view to Paris
+        myMap.setView(paris, 3);
+        // then set the view to user's location
+        // let usersLocation = 
+        
+        myMap.locate({setView: true, watch: true});
+
+        L.tileLayer(`https://tile.jawg.io/jawg-sunny/{z}/{x}/{y}.png?access-token=<%= apiKey %>`, {
+            attribution: '<a href="https://www.jawg.io" target="_blank">&copy; Jawg</a> | <a href="https://www.openstreetmap.org" target="_blank">&copy; OpenStreetMap</a>&nbsp;contributors',
+            maxZoom: 22
+        }).addTo(myMap);
+        // add blobs on the map
+        // let circle = L.circle(usersLocation, {
+        //     color: 'rgb(250, 5, 136)',
+        //     fillColor: 'rgb(250, 5, 136)',
+        //     fillOpacity: 0.5,
+        //     radius: 500
+        // })
+
+        // circle.addTo(myMap);
+        // L.marker([48.7965913, 2.3210938]).addTo(myMap);
+
+        // L.marker([51.5, -0.09]).addTo(myMap);    
     </script>
     
