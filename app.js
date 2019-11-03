@@ -26,20 +26,6 @@ var myMap = L.map('map');
     L.marker([51.5, -0.09]).addTo(myMap);
 
 
-// define the routes
-// app.get('/', function(req, res){
-//     response.send('Hello!');
-//     console.log('Someone has made a request to /');
-// });
-
-// app.get('/cheese', function(req, res){
-//     response.send('CHEEEEEEEESE');
-//     console.log('Someone has made a request to /cheese');
-// }
-
-// );
-
-
 
 // start the node server
 var port = process.env.PORT || 3000;
