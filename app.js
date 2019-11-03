@@ -17,25 +17,25 @@ app.get('/', (req, res)=> {
 
 
 // we want to find out where the user is located
-function getUsersLocation(){
-  if(navigator.geolocation){
-     navigator.geolocation.getCurrentPosition(displayUsersLocation);
-  }
-  else{
-    alert('Your browser does not support geolocation! Soz :<');
-  }
-}
+// function getUsersLocation(){
+//   if(navigator.geolocation){
+//      navigator.geolocation.getCurrentPosition(displayUsersLocation);
+//   }
+//   else{
+//     alert('Your browser does not support geolocation! Soz :<');
+//   }
+// }
 
-function displayUsersLocation(position){
-  console.log(`Current position is${position}`);
-  let usersCoordinates = [position.coords.latitude, position.coords.longitude];
-  return usersCoordinates;
-}
+// function displayUsersLocation(position){
+//   console.log(`Current position is${position}`);
+//   let usersCoordinates = [position.coords.latitude, position.coords.longitude];
+//   return usersCoordinates;
+// }
 
 // map route, feeding in apiKey because we want to access the Jawg API
 app.get('/map', (req, res)=> {
-  let usersCoordinates = getUsersLocation();
-  res.render('map', {apiKey: apiKey, usersCoordinates: usersCoordinates});
+  //let usersCoordinates = getUsersLocation();
+  res.render('map', {apiKey: apiKey/*, usersCoordinates: usersCoordinates*/});
 })
 
 
